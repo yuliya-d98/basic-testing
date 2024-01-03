@@ -53,22 +53,20 @@ describe('simpleCalculator tests', () => {
   });
 
   test('should return null for invalid action', () => {
-    const expected = null;
     const result = simpleCalculator({
       a: 2,
       b: 3,
       action: 78,
     });
-    expect(result).toBe(expected);
+    expect(result).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
-    const expected = null;
     const result = simpleCalculator({
       a: 'aaaaaaaaa',
       b: 'lalalal',
       action: Action.Exponentiate,
     });
-    expect(result).toBe(expected);
+    expect(result).toBeNull();
   });
 });
